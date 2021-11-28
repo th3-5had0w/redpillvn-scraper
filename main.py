@@ -30,7 +30,7 @@ while True:
                         title = re.sub('[#]', '', title)
                     if '/' in title:
                         title = re.sub('[/]', '', title)
-                    path = 'pdfs/'+title
+                    path = 'pdfs/'+title+'.pdf'
                     pdf = weasyprint.HTML(link.get('href')).write_pdf()
                     open(path, 'wb').write(pdf)
                     death.write(checklink)
